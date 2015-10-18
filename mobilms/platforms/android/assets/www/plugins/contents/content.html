@@ -1,0 +1,73 @@
+
+    <div class="user-card">
+        <div class="content">
+			<% if (retorno.length > 0) { %>
+			<div id="form-dados" class="form-details" style="padding-top: 0px;">
+				<form action="" novalidate>				
+					<% _.each(retorno, function(ret) { %>
+						<input type="hidden" name="form-tarefa-modules" id="form-tarefa-modules" value="<%= course_modules %>" />
+						<p>
+							<%= conteudo %>
+						</p>
+						<% if (role < 5) { %>
+						<% } else { %>
+							<% if (cutoffdate == 1) { %>
+								<p>
+									<h2 style="padding-bottom: 0px; margin-bottom: 0px;">A tarefa foi encerrada.</h2>
+								</p>
+							<% } else { %>
+									<% if (onlinetext == 1) { %>
+										<h2 style="padding-bottom: 0px; margin-bottom: 0px;">Texto online</h2>
+										<p>
+											<textarea id="form-tarefa-resposta" name="form-tarefa-resposta" rows="3" style="min-height: 0px;"><%= resposta %></textarea>
+										</p>
+									<% } %>
+									
+									<% if (ja_respondeu == 1) { %>
+										<p style="color: #FF0000;">
+											Foi realizado o envio de tarefa, ao enviar sera subscrita a tarefa anterior.
+										</p>
+									<% } %>
+									
+									<% if (file == 1) { %>
+									
+										<% if (maxfile <= 0) { %>
+											<p style="color: #FF0000;">
+												Limite de envio de arquivo excedido.
+											</p>
+										<% }else{ %>
+											<h2 style="padding-bottom: 0px; margin-bottom: 0px;">Envio de arquivo</h2>
+											<p style="display: inline-block;">
+												<a href="javascript:void(0);" id="btn-content-photo" style="padding: 5px;"><img src="img/photo.png" border="0" /></a> &nbsp;&nbsp;&nbsp; 
+
+												<% if (vandroid >= 440) { %>
+													<a href="javascript:void(0);" id="uploadFileChooser" style="padding: 5px;"><img src="img/attach.png" border="0" /></a>
+												<% }else{ %>
+													<div class="uploadfilecontainer" style="display: inline;">
+														<button style="display: inline-block; border: 0px; background: transparent; width: 20px; height: 20px; padding: 0; margin-top: 3px; vertical-align: top; border-radius: 0px; text-decoration: none;"><img src="img/attach.png" border="0" style="display: block; height: 16px; width: 16px;"/></button>
+														<input type="file" class="upload" id="uploadFileChooser">
+													</div>
+												<% } %>
+												
+												<div id="form-arquivo-anexado">nenhum arquivo anexado</div>
+												<input type="hidden" name="form-arquivo-result" id="form-arquivo-result" value="" />
+											</p>
+										<% } %>
+										
+									<% } %>
+									
+									<% if ((onlinetext == 1) || (file == 1)) { %>
+										<p>
+											<input type="button" name="form-tarefa-adicionar" id="form-tarefa-adicionar" value="Salvar mudanças">
+										</p>
+									<% } %>
+							<% } %>
+						<% } %>
+					<% }); %>
+				</form>
+			</div>
+			<% } %>
+
+        </div>
+    </div>
+	<br><br>

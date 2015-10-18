@@ -1,0 +1,27 @@
+
+<div class="content-index">	
+	<div>
+		<div class="bd">
+			<br />
+		</div>
+	</div>
+	<ul class="nav nav-v">
+		<% _.each(retorno, function(retorno) { %>
+		<li class="nav-item media">
+			<div class="content-table">
+				<div class="content-actions app-ico">
+					<img src="img/info.png" border="0" id="info-<%= retorno.id %>" class="content-info" data-id="<%= retorno.id %>" data-content="<%= retorno.intro %>">			
+				</div>
+				<div class="content-name">
+					<a href="#course/glossario/<%= retorno.course %>/id/<%= retorno.id %>/<%= retorno.mod %>">
+						<div class="bd">
+							<p><%= retorno.name %><p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		</li>
+		<% }); %>
+	</ul>
+</div>

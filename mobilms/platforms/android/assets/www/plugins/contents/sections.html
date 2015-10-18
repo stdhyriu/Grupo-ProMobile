@@ -1,0 +1,50 @@
+<div class="content-index">
+
+<%
+$.each(sections, function(index, section) { %>
+    <% if (section.modules && section.modules.length >0) { 
+		if ((section.locativa == 1) && (locativa == 0)) {
+		%>
+		<div class="user-card">
+			<div class="content">
+				<div id="form-dadoss" class="form-details" style="padding-top: 0px; padding-bottom: 10px;">
+						<input type="button" name="form-content-gps" id="form-content-gps" value="Atualizar minha posição">
+					
+				</div>
+			</div>
+		</div>
+		<%	
+			locativa = 1;
+		}
+		}	
+	%>
+<% }); %>
+
+<ul class="nav nav-v">
+<% $.each(sections, function(index, section) { %>
+    <% if (section.modules && section.modules.length >0) { 
+		if (section.visible == 3){
+		%>
+			<li class="nav-item">
+				<a href="javascript:void(0);" class="menu1 touch-row" style="background-color: #f4f4f4;"><%= section.name%> - Disponível em: <%= section.format_gps_address%></a>
+			</li>
+		<% 
+		}else if (section.locativa == 2) {
+		%>
+			<li class="nav-item">
+				<a href="#course/contents/<%= course.courseid %>/section/<%= index %>" class="menu1 touch-row" style="background-color: #e8f5e8;"><%= section.name%> - Disponível na sua posição atual</a>
+			</li>		
+		<%
+		}else{
+		%>
+			<li class="nav-item">
+				<a href="#course/contents/<%= course.courseid %>/section/<%= index %>" class="menu1 touch-row"><%= section.name%></a>
+			</li>
+		<% 
+		}
+	} 
+	%>
+<% }); %>
+</ul>
+
+</div>

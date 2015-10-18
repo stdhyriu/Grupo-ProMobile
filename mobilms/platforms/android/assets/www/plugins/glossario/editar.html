@@ -1,0 +1,31 @@
+<div class="content-index">	
+    <div class="user-card">
+        <div class="content">
+			<div id="form-glossario-editar" class="form-details" style="padding-top: 20px;">
+				<form action="" novalidate>
+					<input type="hidden" name="editar-glossario-id" id="editar-glossario-id" value="<%= tid %>" />
+					<p style="text-align: right; padding-bottom: 0px;">
+						<a href="javascript:void(0);" id="btn-glossario-deletar-item" style="padding: 5px;"><img src="img/trash.png" border="0" /></a>
+					</p>
+					<p>
+						<a href="javascript:void(0);" id="btn-glossario-editar-photo" style="padding: 5px;"><img src="img/photo.png" border="0" /></a> &nbsp;&nbsp; 
+						<a href="javascript:void(0);" id="btn-glossario-editar-image" style="padding: 5px;"><img src="img/attach.png" border="0" /></a>
+						<div id="glossario-image-attach"><%= timage %></div>
+						<input type="hidden" name="glossario-image-result" id="glossario-image-result" value="" />
+					</p>
+					<p>
+					<br />
+						<input type="text" id="editar-glossario-conceito" name="editar-glossario-conceito" autocapitalize="off" autocorrect="off" placeholder="Conceito" value="<%= tconcept %>">
+					</p>
+					<p>
+						<textarea id="editar-glossario-definicao" name="form-glossario-definicao" placeholder="Definição" style="min-height: 7rem;"><%= decodeURIComponent(tdefinition) %></textarea>
+					</p>
+					<p>
+						<input type="button" name="btn-glossario-editar" id="btn-glossario-editar" value="Salvar mudanças">
+					</p>
+				</form>
+			</div>
+
+        </div>
+    </div>
+</div>

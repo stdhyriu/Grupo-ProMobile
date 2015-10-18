@@ -1,0 +1,23 @@
+
+<div class="content-index">	
+	<section class="cat-index-list">
+		<ul id="list-cat" class="nav nav-v">
+			<% $.each(retorno, function(index, section) { %>
+				<li class="nav-item">
+					<a class="media touch-row editItem" href="javascript:void(0);" rel="<%= section.id%>">
+						<input type="hidden" name="glossario-edit-image<%= section.id%>" id="glossario-edit-image<%= section.id%>" value="<%= section.image%>" />
+						<input type="hidden" name="glossario-edit-concept<%= section.id%>" id="glossario-edit-concept<%= section.id%>" value="<%= section.concept%>" />
+						<input type="hidden" name="glossario-edit-definition<%= section.id%>" id="glossario-edit-definition<%= section.id%>" value="<%= section.definition%>" />
+						<div class="img">
+							<img alt="img" src="<%= section.image%>">
+						</div>
+						<div class="bd">
+							<strong><%= section.concept%></strong><br />
+						</div>
+					</a>
+				</li>
+			<% }); %>
+		</ul>
+	</section>
+	<br /><br />
+</div>

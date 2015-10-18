@@ -1,0 +1,23 @@
+<div class="content-index">
+	<div class="user-card">
+		<div class="content">
+			<div class="form-details" style="padding-top: 5px; padding-bottom: 10px;">
+				<input type="text" id="form-participants-procurar" autocapitalize="off" autocorrect="off"  placeholder="procurar...">
+			</div>
+		</div>
+	</div>
+   
+	<section class="users-index-list">
+        <ul class="nav nav-v" id="list-participants">
+            <%= MM.tpl.render(MM.plugins.participants.templates.participantsRow.html, {"courseId": courseId, "users": users, "rnd": rnd, }) %>
+        </ul>
+        <ul id="participants-additional" class="nav nav-v">
+        </ul>
+    </section>
+    <% if (showMore) { %>
+    <div class="centered">
+        <button id="participants-showmore">mostrar mais</button>
+    </div>
+    <% } %>
+	<br><br>
+</div>

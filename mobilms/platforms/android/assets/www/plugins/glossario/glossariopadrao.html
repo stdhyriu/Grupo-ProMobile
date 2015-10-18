@@ -1,0 +1,51 @@
+<script type="text/template" id="header-icon-left-content">
+    <a href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/meusitens/<%= gmod %>"><img src="plugins/glossario/list.png"></a>
+</script>
+
+<div class="content-index">	
+	<div class="user-card">
+		<div class="content">
+			<div id="form-dadoss" class="form-details" style="padding-top: 0px; padding-bottom: 10px;">
+				<input type="button" name="form-glossario-inserir" id="form-glossario-inserir" value="Inserir novo item">
+			</div>
+		</div>
+	</div>
+	
+        <div class="content">
+			<div>
+				<dl class="accordionLetra">
+					<%
+					var a = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+					a.forEach(function(entry) {
+					%>
+					<dt><a href=""><%= entry%></a></dt>
+					<dd>
+						<section class="cat-index-list">
+							<ul id="list-cat" class="nav nav-v">
+								<% 
+								$.each(retorno, function(index, section) {
+									conceito = section.concept;
+									if (conceito[0].toUpperCase() == entry){
+									%>
+									<li class="nav-item">
+										<a class="media touch-row" href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/categoria/0/palavra/<%= section.id%>">
+											<div class="img">
+												<img alt="img" src="<%= section.image%>">
+											</div>
+											<div class="bd">
+												<strong><%= section.concept%></strong><br />
+											</div>
+										</a>
+									</li>
+									<% 
+									}
+								}); 
+								%>
+							</ul>
+						</section>
+					</dd>
+					<% }); %>
+				</dl>
+			</div>
+        </div>
+</div>	

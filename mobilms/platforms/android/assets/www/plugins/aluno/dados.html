@@ -1,0 +1,43 @@
+<div class="content-index">	
+    <div class="user-card">
+        <div class="content">
+
+		
+			<% if (retorno.length > 0) { %>
+			<div id="form-dados" class="form-details">
+				<form action="" novalidate>
+					<% _.each(retorno, function(ret) { %>
+					<p>
+						<input type="text" id="form-aluno-firstname" name="form-aluno-firstname" autocapitalize="off" autocorrect="off" readonly="readonly" placeholder="<%= MM.lang.s("firstname", "aluno") %>" value="<%= ret.firstname %>">
+					</p>
+					<p>
+						<input type="text" id="form-aluno-lastname" name="form-aluno-lastname" autocapitalize="off" autocorrect="off" readonly="readonly" placeholder="<%= MM.lang.s("lastname", "aluno") %>" value="<%= ret.lastname %>">
+					</p>
+					<p>
+						<input type="text" id="form-aluno-email" name="form-aluno-email" autocapitalize="off" autocorrect="off" readonly="readonly" placeholder="<%= MM.lang.s("email", "aluno") %>" value="<%= ret.email %>">
+					</p>
+					
+					<p>
+					<h2>Mudar a senha</h2>
+					</p>
+					<p>
+						<input type="password" id="form-aluno-passwordatual" name="form-aluno-passwordatual" autocapitalize="off" autocorrect="off" placeholder="Senha Atual" value="">
+					</p>
+					
+					<p>
+						<input type="password" id="form-aluno-password" name="form-aluno-password" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("password", "aluno") %>" value="">
+					</p>
+					<p>
+						<input type="password" id="form-aluno-password2" name="form-aluno-password2" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("password2", "aluno") %>" value="">
+					</p>
+					<p>
+						<input type="button" name="update" id="form-aluno-update" value="<%= MM.lang.s("update", "aluno") %>">
+					</p>
+					<% }); %>
+				</form>
+			</div>
+			<% } %>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<script type="text/template" id="header-icon-left-content">
+    <a href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/meusitens/<%= gmod %>"><img src="plugins/glossario/list.png"></a>
+</script>
+
+<div class="content-index">	
+    <div class="user-card">
+        <div class="content">
+			<div>
+                <% 
+				var col = 1;
+				for (i = 1; i <= 61; i++) {
+					if (col == 1){
+					%>
+					<div class="section group">
+					<% } %>
+					
+						<div class="col span_1_of_2">
+							<a href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/categoria/<%= i %>/<%= gmod %>" class="form-glossario-inserir" style="display: inline-block; max-height: 100px; max-width: 80px;">
+								<img src="img/glossary/ic_config<%= i %>.png" border="0">
+							</a>
+							<br />
+							<%= i %>
+						</div>
+					<%
+					col = col + 1;
+					%>
+
+					<%
+					if (col == 3){
+					col = 1;
+					%>
+					</div>
+					<% } %>
+                <% } %>
+			</div>
+        </div>
+    </div>
+</div>	

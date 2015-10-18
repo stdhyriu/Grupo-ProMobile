@@ -1,0 +1,52 @@
+<?php
+subject = "";
+?>
+<p>
+<a href="#course/forums/<%= tcourseId %>/<%= forumName %>/discussions/<%= tforumId %>"><img src="img/arrowleft.png" border="0"></a>
+</p>
+
+<div class="content-index forum-mg">
+    <header>
+        <div class="media">
+            <div class="bd">
+                <h1><%= course.fullname %></h1>
+                <p><%= course.summary %></p>
+            </div>
+        </div>
+    </header>
+
+	<h2><%= forumName %></h2>
+	
+	<% if (posts.length > 0) { %>
+	<ul class="nav nav-v">
+		<% _.each(posts, function(post) {
+			subject = post.subject;
+		%>
+		<li class="nav-item media">
+			<div class="disc_cont">
+				<% if (MM.config.current_site.userid == post.userid){%>
+					<% if (post.type == "news"){ %>
+					<% }else{ %>
+						<a href="#course/forums/<%= tcourseId %>/<%=  encodeURIComponent(forumName) %>/discussions/<%= tforumId %>/posts/<%= tdiscussionId %>/reply/edit_<%= post.id %>"><img src="img/editar.png" border="0"> <h3><%= post.subject %></h3></a>
+					<% } %>
+				<% }else{ %>
+					<h3><%= post.subject %></h3>
+				<% } %>
+				
+				<p><%= post.message %></p>
+				<p style="margin-top: 15px; line-height: 15px;"><i><%= post.userfullname %></i></p>
+				<p><i><%= new Date(post.modified * 1000).toLocaleString() %></i></p>
+				
+				<% if ((post.type == "news") && (role==5)){%>
+				<% }else{ %>
+					<br />
+					<a href="#course/forums/<%= tcourseId %>/<%=  encodeURIComponent(forumName) %>/discussions/<%= tforumId %>/posts/<%= post.id %>/reply/<%= encodeURIComponent(post.subject) %>"><img src="img/list-rightarrow.png" border="0"> responder</a>
+				<% } %>
+			</div>
+		</li>
+		<% }); %>
+	</ul>
+	<% } else { %>
+		<%= MM.lang.s("nomessages", "forums") %>
+	<% } %>
+</div>

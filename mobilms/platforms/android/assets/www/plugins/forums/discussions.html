@@ -1,0 +1,33 @@
+
+<div class="content-index forum-mg">
+    <header>
+        <div class="media">
+            <div class="bd">
+                <h1><%= course.fullname %></h1>
+                <p><%= course.summary %></p>
+            </div>
+        </div>
+    </header>
+
+	<h2><%= forumName %></h2>
+	
+	<% if (discussions.length > 0) { %>
+	<ul class="nav nav-v">
+		<% _.each(discussions, function(discussion) { %>
+		<li class="nav-item media">
+			<a href="#course/forums/<%= course.courseid %>/<%=  encodeURIComponent(forumName) %>/discussions/<%= forumId %>/posts/<%= discussion.id %>">
+				<div class="disc_cont">
+					<h3><%= discussion.subject %></h3>
+					<span class="font6" style="margin-top: 15px; line-height: 15px !important;">
+						<i style="line-height: 15px !important;"><%= discussion.firstuserfullname %><br /></i>
+						<i><%= new Date(discussion.timemodified * 1000).toLocaleString() %></i>
+					</span>
+				</div>
+			</a>
+		</li>
+		<% }); %>
+	</ul>
+	<% } else { %>
+		<%= MM.lang.s("nomessages", "forums") %>
+	<% } %>
+</div>

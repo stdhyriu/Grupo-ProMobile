@@ -1,0 +1,33 @@
+<script type="text/template" id="header-icon-right-content">
+    <a href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/categoria/<%= gcategoria %>/inserir/<%= gmod %>"><img src="plugins/glossario/add.png"></a>
+</script>
+
+<div class="content-index">	
+    <div class="user-card">
+        <div class="content">
+			<div class="section group">
+				<div class="col span_2_of_2">
+					<img src="img/glossary/ic_config<%= gcategoria %>.png" border="0">
+				</div>
+			</div>
+        </div>
+    </div>
+
+	<section class="cat-index-list">
+		<ul id="list-cat" class="nav nav-v">
+			<% $.each(retorno, function(index, section) { %>
+				<li class="nav-item">
+					<a class="media touch-row" href="#course/glossario/<%= gcourseid %>/id/<%= gid %>/categoria/<%= gcategoria %>/palavra/<%= section.id%>">
+						<div class="img">
+							<img alt="img" src="<%= section.image%>">
+						</div>
+						<div class="bd">
+							<strong><%= section.concept%></strong><br />
+						</div>
+					</a>
+				</li>
+			<% }); %>
+		</ul>
+	</section>
+	<br /><br />
+</div>

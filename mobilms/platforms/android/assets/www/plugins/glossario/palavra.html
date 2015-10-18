@@ -1,0 +1,54 @@
+<div class="content-index">	
+    <div class="user-card">
+        <div class="content">
+			<% $.each(retorno, function(index, section) { %>
+			<div class="section group">
+				<div class="col2 span_12_of_3">
+					<img src="<%= section.image%>" border="0">
+				</div>	
+				<div class="col2 span_13_of_3">
+					<strong><%= section.concept%></strong><br />
+					<%= decodeURIComponent(section.definition)%>
+				</div>		
+				<div class="col2 span_12_of_3">
+					<img src="img/glossary/ic_config<%= gcategoria%>.png" border="0">
+				</div>
+			</div>
+			<% }); %>
+        </div>
+    </div>
+	
+	<div class="content-index">
+		<div class="path-mod-forum forum-discussion">
+			<div class="indent">
+				<% _.each(retorno, function(section) { %>
+					<% _.each(section.comments, function(module) { %>
+						<% if (module.foto!="naotem"){ %>
+						<div class="forum-post">
+							<div class="header">
+								<img class="user-picture" src="<%= module.foto%>">
+								<a class="author-name" rel="author"><%= module.autor%></a>
+								<time><%= MM.util.timestampToUserDate(module.data) %></time>
+							</div>
+							<div class="content_palavra">
+								<%= module.comentario%>
+							</div>
+						</div>
+						<% } %>
+					<% }); %>				
+				<% }); %>
+			</div>
+		</div>
+	</div>
+	
+	<div id="form-dados" class="form-details">
+		<form action="" novalidate>
+			<p>
+				<input type="text" id="form-glossario-comentario" name="form-glossario-comentario" autocapitalize="off" autocorrect="off" placeholder="comentário" value="">
+			</p>
+			<p>
+				<input type="button" name="form-glossario-comentar" id="form-glossario-comentar" value="enviar">
+			</p>
+		</form>
+	</div>
+</div>	

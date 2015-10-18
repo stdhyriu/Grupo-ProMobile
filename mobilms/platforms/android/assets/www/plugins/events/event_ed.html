@@ -1,0 +1,37 @@
+<div class="panel-container">
+    <div class="event">
+        <div class="date">
+            <p>
+                <input type="text" id="form-event-name" name="form-event-name" class="form-input" autocapitalize="off" autocorrect="off" placeholder="Nome do Evento" value="<%= MM.util.formatText(event.name) %>">
+				<input type="hidden" id="form-event-id" name="form-event-id" value="<%= relId %>">
+            </p>
+        </div>
+		
+        <div class="date">
+            <p>
+				<input type="text" id="form-event-date" name="form-event-date" class="form-input" autocapitalize="off" autocorrect="off" value="<%= event.startdate %> <%= event.starttime %>">
+            </p>
+        </div>
+
+        <% if (event.courseName) { %>
+            <div class="course"><p><%= MM.lang.s("course") %>: <%= MM.util.formatText(event.courseName) %></p></div>
+        <% } %>
+
+        <% if (event.modulename != "0") { %>
+            <!--<div class="media">
+                <div class="img app-ico">
+                    <img src="img/mod/< %= event.modulename %>.png">
+                </div>
+                <div class="bd">
+                    < %= event.name %>
+                </div>
+            </div>-->
+        <% } %>
+
+        <div class="description"><%= MM.util.formatText(event.description) %></div>
+    </div>
+	<p>
+		<input type="button" name="update" id="form-event-update" value="Salvar alterações" class="form-button">
+	</p>
+</div>
+<br><br>

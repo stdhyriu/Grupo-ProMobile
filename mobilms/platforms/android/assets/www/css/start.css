@@ -1,0 +1,372 @@
+.form-details {
+  margin: 0 auto;
+  width: 90%;
+}
+.form-details {
+  padding-top: 3rem;
+}
+.form-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    line-height: 24px;
+    padding: 4px 6px;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.form-button {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #b3b3b3;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 4px 12px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	text-overflow: ellipsis;
+    width: 100%;
+	cursor: pointer;
+}
+.form-details h1 img{
+  width: 133px;
+  height: auto;
+  margin-bottom: 40px;
+}
+.form-details form {
+  *zoom: 1;
+  margin-bottom: 0;
+}
+.form-details form:before,
+.form-details  form:after {
+  content: "";
+  display: table;
+}
+.form-details  form:after {
+  clear: both;
+}
+.form-details  input {
+	width: 100%;
+	padding: 4px 6px;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	line-height: 24px;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+}
+.form-details  input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #F5F5F5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #b3b3b3;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+.form-details  input[type="submit"]:hover,
+.form-details  input[type="submit"]:focus {
+  background-image: none;
+}
+.form-details  input[type="button"] {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #F5F5F5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #b3b3b3;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+  margin-top: 15px;
+  /*display: none;*/
+}
+.form-details  input[type="button"]:hover,
+.form-details  input[type="button"]:focus {
+  background-image: none;
+}
+.form-details {
+  padding-top: 40px;
+}
+.font6{
+	color: #666666;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	font-size: .675rem;
+	line-height: 24px;
+}
+
+#add-site #login-details {
+  padding-top: 20px !important;
+}
+#map_canvas {
+  width: 100%;
+  min-height: 300px;
+  height: 50%;
+  position: relative;
+  background-color: #fa8f1c;
+}
+
+
+.accordionLetra {
+   margin: 10px;   
+   dt, dd {
+      padding: 10px;
+      border: 1px solid #eee;
+      border-bottom: 0; 
+      &:last-of-type {
+        border-bottom: 1px solid #eee; 
+      }
+      a {
+        display: block;
+        color: #666666;
+        font-weight: bold;
+      }
+   }
+  dd {
+     border-top: 0; 
+     font-size: 12px;
+     &:last-of-type {
+       border-top: 1px solid white;
+       position: relative;
+       top: -1px;
+     }
+  }
+}
+.accordionLetra dt {
+	padding: 10px;
+	border: 1px solid #eee;
+	border-bottom: 1px solid #eee; 
+}
+.accordionLetra dt:last-of-type {
+	border-bottom: 1px solid #eee; 
+}
+.accordionLetra dd{
+	border: 0px solid #eee;
+	border-top: 0px solid white;
+	position: relative;
+}
+.accordionLetra dt a{
+	display: block;
+	color: #666666;
+	font-weight: bold;
+}
+
+/*  SECTIONS  ============================================================================= */
+.section {
+	clear: both;
+	padding: 0 2em 0 2em;
+	margin: 0px;
+}
+/*  GROUPING  ============================================================================= */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+/*  GRID COLUMN SETUP   ==================================================================== */
+.col { background: #ffffff; padding:1em 0; text-align:center;}
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+	border: 2px solid #ccc;
+}
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col { 
+		/**margin: 1% 0 1% 0%;**/
+		margin: 1%;
+	}
+}
+/*  GRID COLUMN SETUP BORDER  ==================================================================== */
+.col2 { background: #ffffff; padding:1em 0; text-align:center;}
+.col2 {
+	display: block;
+	float:left;
+	/**margin: 1% 0 1% 1.6%;**/
+	margin: 1%;
+}
+.col2 strong {
+	font-size: 1rem;
+}
+.col2:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col2 { 
+		margin: 1% 0 1% 0%;
+	}
+}
+/*  GRID OF TWO   ============================================================================= */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 48%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.span_2_of_2 {
+		width: 100%; 
+	}
+	.span_1_of_2 {
+		/**width: 100%; 
+		width: 49.2%;**/ 
+		width: 48%;
+	}
+}
+/* - glossary list on the center panel
+-------------------------------------------------------------------------- */
+.cat-index-list li {
+  min-height: 55px;
+  max-height: 60px;
+  overflow: hidden;
+}
+.cat-index-list .nav-item > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.cat-index-list .nav-item > a img {
+  width: 48px;
+  height: 48px;
+  padding-bottom: 6px;
+}
+.cat-index-list .nav-item > a p {
+  line-height: 55px;
+  margin: 0;
+}
+/*  GRID OF THREE   ============================================================================= */
+.span_3_of_3 {
+	width: 100%; 
+}
+
+.span_2_of_3 {
+	width: 66.13%; 
+}
+.span_1_of_3 {
+	width: 32.26%; 
+}
+.span_12_of_3 {
+	width: 10%; 
+}
+.span_13_of_3 {
+	width: 75%; 
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+	.span_12_of_3 {
+		width: 10%; 
+	}
+	.span_13_of_3 {
+		width: 75%;
+	}
+}
+.content_palavra{
+	border-top: 1px solid #eee;
+    margin-left: 50px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.file-upload {
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.btn-primary {
+    /*background-color: transparent;*/
+	background: transparent url(../img/attach.png) no-repeat;;
+    color: #fff;
+}
+.btn {
+    -moz-user-select: none;
+    /*background-image: none;*/
+    border: 0px solid transparent;
+    border-radius: 0px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    /*margin-bottom: 0;*/
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.file-upload input.upload {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+input[type="file"] {
+    display: block;
+}
+.forum-mg .bd{
+	/*margin: 0px 10px 0px 10px;*/
+}
+.forum-mg h2{
+	/*margin: 0px 10px 0px 10px;*/
+}
+.forum-mg h3{
+	/*margin: 0px 10px 0px 10px;*/
+	padding: 0px !important;
+}
+.forum-mg p{
+	/*width: 90% !important;
+	margin-left: 5%;
+	margin-right: 5%;*/
+}
+.forum-mg .font6 i{
+	/*width: 90% !important;
+	margin-left: 5%;
+	margin-right: 5%;*/
+}
+.forum-mg .nav-v .nav-item {
+	/*margin: 0px 20px 0px 20px !important;*/
+}
+.forum-mg .disc_cont{
+	margin: 0px 20px 0px 20px !important;
+	padding-bottom: 10px !important;
+}
